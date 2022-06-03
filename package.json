@@ -1,0 +1,19 @@
+{
+  "name": "uttravelers-node",
+  "version": "1.0.0",
+  "description": "Routes for the UTTravelers database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UT",
+    "Travel",
+    "Practices"
+  ],
+  "author": "Beatriz Martínez Pérez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
