@@ -9,12 +9,9 @@ commentaryCtrl.getCommentaries = async (req, res) => {
 
 commentaryCtrl.createCommentary = async (req,res) => {
     const newCommentary = new commentary({
-        idUser: req.body.idUser,
-        strDate: req.body.strDate,
-        strName: req.body.strName,
-        arrSymptoms: req.body.arrSymptoms,
-        intStatus: req.body.intStatus,
-        strNotes : req.body.strNotes,
+        _idCommentary: req.body._idCommentary,
+        strCommentary: req.body.strCommentary,
+        dateDate: req.body.dateDate
     });
     await newCommentary.save();
     res.json({
@@ -31,12 +28,9 @@ commentaryCtrl.getCommentary = async (req,res) => {
 commentaryCtrl.editCommentary = async (req,res) => {
     const { id } = req.params;
     const newCommentary = {
-        idUser: req.body.idUser,
-        strDate: req.body.strDate,
-        strName: req.body.strName,
-        arrSymptoms: req.body.arrSymptoms,
-        intStatus: req.body.intStatus,
-        strNotes : req.body.strNotes,
+        _idCommentary: req.body._idCommentary,
+        strCommentary: req.body.strCommentary,
+        dateDate: req.body.dateDate
     }
     //(id, new object, if it doesn't exist create it)
     await commentary.findByIdAndUpdate(id, {$set: newCommentary}, {new:true});
