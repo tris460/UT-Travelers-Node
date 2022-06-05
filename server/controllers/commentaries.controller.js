@@ -1,7 +1,6 @@
 const commentary = require('../models/commentaries');
 const commentariesCtrl = {};
 
-
 commentariesCtrl.getCommentaries = async (req, res) => {
     const comment = await commentary.find();
     res.json(comment);
