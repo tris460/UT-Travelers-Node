@@ -1,13 +1,13 @@
 const commentary = require('../models/commentaries');
-const commentaryCtrl = {};
+const commentariesCtrl = {};
 
 
-commentaryCtrl.getCommentaries = async (req, res) => {
+commentariesCtrl.getCommentaries = async (req, res) => {
     const comment = await commentary.find();
     res.json(comment);
 };
 
-commentaryCtrl.createCommentary = async (req,res) => {
+commentariesCtrl.createCommentary = async (req,res) => {
     const newCommentary = new commentary({
         _idCommentary: req.body._idCommentary,
         strCommentary: req.body.strCommentary,
@@ -20,12 +20,12 @@ commentaryCtrl.createCommentary = async (req,res) => {
     console.log(req.body);
 };
 
-commentaryCtrl.getCommentary = async (req,res) => {
+commentariesCtrl.getCommentary = async (req,res) => {
     const find = await commentary.findById(req.params.id);
     res.json(find);
 };
 
-commentaryCtrl.editCommentary = async (req,res) => {
+commentariesCtrl.editCommentary = async (req,res) => {
     const { id } = req.params;
     const newCommentary = {
         _idCommentary: req.body._idCommentary,
@@ -39,11 +39,11 @@ commentaryCtrl.editCommentary = async (req,res) => {
     });
 };
 
-commentaryCtrl.deleteCommentary = async (req,res) => {
+commentariesCtrl.deleteCommentary = async (req,res) => {
     await commentary.findByIdAndRemove(req.params.id);
     res.json({
         status: 'Commentary deleted'
     });
 };
 
-module.exports = commentaryCtrl;
+module.exports = commentariesCtrl;
