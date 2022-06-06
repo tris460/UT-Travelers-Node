@@ -8,7 +8,7 @@ experiencesCtrl.getExperiences = async (req, res) => {
 
 experiencesCtrl.createExperience = async (req,res) => {
     const newExperience = new experience({
-        _idExperience: req.body._idExperience,
+        _id: req.body._id,
         boolStatus: req.body.boolStatus,
         strDescription: req.body.strDescription,
         strName: req.body.strName,
@@ -31,7 +31,7 @@ experiencesCtrl.getExperience = async (req,res) => {
 experiencesCtrl.editExperience = async (req,res) => {
     const { id } = req.params;
     const newExperience = {
-        _idExperience: req.body._idExperience,
+        _id: req.body._id,
         boolStatus: req.body.boolStatus,
         strDescription: req.body.strDescription,
         strName: req.body.strName,

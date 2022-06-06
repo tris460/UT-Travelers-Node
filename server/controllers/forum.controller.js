@@ -8,7 +8,7 @@ forumCtrl.getQuestions = async (req, res) => {
 
 forumCtrl.createQuestion = async (req,res) => {
     const newQuestion = new forum({
-        _idQuestion: req.body._idQuestion,
+        _id: req.body._id,
         strStatus: req.body.strStatus,
         arrAnswers: req.body.arrAnswers,
         strTopic: req.body.strTopic,
@@ -31,7 +31,7 @@ forumCtrl.getQuestion = async (req,res) => {
 forumCtrl.editQuestion = async (req,res) => {
     const { id } = req.params;
     const newQuestion = {
-        _idQuestion: req.body._idQuestion,
+        _id: req.body._id,
         strStatus: req.body.strStatus,
         arrAnswers: req.body.arrAnswers,
         strTopic: req.body.strTopic,

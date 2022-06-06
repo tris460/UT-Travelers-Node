@@ -7,8 +7,8 @@ programsCtrl.getPrograms = async (req, res) => {
 };
 
 programsCtrl.createProgram = async (req,res) => {
-    const newQuestion = new program({
-        _idProgram: req.body._idProgram,
+    const newProgram = new program({
+        _id: req.body._id,
         boolStatus: req.body.boolStatus,
         strName: req.body.strName,
         dateStart: req.body.dateStart,
@@ -18,7 +18,7 @@ programsCtrl.createProgram = async (req,res) => {
         strUrl: req.body.strUrl,
         strImage: req.body.strImage
     });
-    await newQuestion.save();
+    await newProgram.save();
     res.json({
        'status' : 'Program saved'
     });

@@ -8,7 +8,7 @@ commentariesCtrl.getCommentaries = async (req, res) => {
 
 commentariesCtrl.createCommentary = async (req,res) => {
     const newCommentary = new commentary({
-        _idCommentary: req.body._idCommentary,
+        _id: req.body._id,
         strCommentary: req.body.strCommentary,
         dateDate: req.body.dateDate
     });
@@ -27,7 +27,7 @@ commentariesCtrl.getCommentary = async (req,res) => {
 commentariesCtrl.editCommentary = async (req,res) => {
     const { id } = req.params;
     const newCommentary = {
-        _idCommentary: req.body._idCommentary,
+        _id: req.body._id,
         strCommentary: req.body.strCommentary,
         dateDate: req.body.dateDate
     }
