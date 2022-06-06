@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const CommentariesSchema = new Schema({
-    _idCommentary: { type: String, required: true },
+    _id: { type: String, required: true },
     strCommentary: { type: String, required: true },
     dateDate: { type: Date, required: true }
 });

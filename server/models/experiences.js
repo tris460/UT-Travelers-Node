@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const ExperiencesSchema = new Schema({
-    _iExperience: { type: String, required: true },
+    _id: { type: String, required: true },
     boolStatus: { type: Boolean, required: true},
     strDescription: { type: String, required: true },
     strName: { type: String, required: true },
