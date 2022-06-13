@@ -1,4 +1,4 @@
-const program = require('../models/program');
+const program = require('../models/programs');
 const programsCtrl = {};
 
 programsCtrl.getPrograms = async (req, res) => {
