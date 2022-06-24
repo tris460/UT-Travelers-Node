@@ -29,7 +29,6 @@ userProgramCtrl.getUserProgram = async (req,res) => {
 userProgramCtrl.editUserProgram = async (req,res) => {
     const { id } = req.params;
     const newUserProgram = {
-        _id: req.body._id,
         idUser: req.body.idUser,
         idProgram: req.body.idProgram,
         strStatus: req.body.strStatus,

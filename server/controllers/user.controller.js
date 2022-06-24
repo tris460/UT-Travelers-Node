@@ -36,7 +36,6 @@ userCtrl.getUser = async (req,res) => {
 userCtrl.editUser = async (req,res) => {
     const { id } = req.params;
     const newUser = {
-        _id: req.body._id,
         boolStatus: req.body.boolStatus,
         strRol: req.body.strRol,
         strName: req.body.strName,

@@ -33,13 +33,14 @@ programsCtrl.getProgram = async (req,res) => {
 programsCtrl.editProgram = async (req,res) => {
     const { id } = req.params;
     const newProgram = {
-        _idQuestion: req.body._idQuestion,
-        strStatus: req.body.strStatus,
-        arrAnswers: req.body.arrAnswers,
-        strTopic: req.body.strTopic,
-        strQuestion: req.body.strQuestion,
-        dateDate: req.body.dateDate,
-        idUser: req.body.idUser
+        boolStatus: req.body.boolStatus,
+        strName: req.body.strName,
+        dateStart: req.body.dateStart,
+        dateEnd: req.body.dateEnd,
+        strDescription: req.body.strDescription,
+        anyAnnouncement: req.body.anyAnnouncement,
+        strUrl: req.body.strUrl,
+        strImage: req.body.strImage
     }
     //(id, new object, if it doesn't exist create it)
     await program.findByIdAndUpdate(id, {$set: newProgram}, {new:true});

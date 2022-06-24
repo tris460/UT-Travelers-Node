@@ -27,7 +27,6 @@ commentariesCtrl.getCommentary = async (req,res) => {
 commentariesCtrl.editCommentary = async (req,res) => {
     const { id } = req.params;
     const newCommentary = {
-        _id: req.body._id,
         strCommentary: req.body.strCommentary,
         dateDate: req.body.dateDate
     }

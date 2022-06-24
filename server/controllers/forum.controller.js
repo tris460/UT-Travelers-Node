@@ -31,7 +31,6 @@ forumCtrl.getQuestion = async (req,res) => {
 forumCtrl.editQuestion = async (req,res) => {
     const { id } = req.params;
     const newQuestion = {
-        _id: req.body._id,
         strStatus: req.body.strStatus,
         arrAnswers: req.body.arrAnswers,
         strTopic: req.body.strTopic,
