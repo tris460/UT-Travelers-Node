@@ -6,7 +6,7 @@ const ForumSchema = new Schema({
     arrAnswers: { type: Array, required: false },
     strTopic: { type: String, required: true },
     strQuestion: { type: String, required: true },
-    dateDate: { type: Date, required: true },
+    dateDate: { type: String, required: true },
     idUser: { type: String, required: false },
 });
 
