@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(cors({}));
 
 // Routes
+app.get('/', function(req, res){
+    res.send('<h1>Web server for UTTravelers</h1>');
+});
 app.use('/api/users', require('./routes/users.routes'));
 app.use('/api/programs', require('./routes/programs.routes'));
 app.use('/api/experiences', require('./routes/experiences.routes'));
